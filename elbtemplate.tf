@@ -7,11 +7,4 @@ resource "aws_elb" "elbByTFE" {
     lb_port           = 80
     lb_protocol       = "http"
   }
-
-  listener {
-    instance_port      = "${var.instance_port}"
-    instance_protocol  = "${var.protocol}"
-    lb_port            = 443
-    lb_protocol        = "https"
-  }
 }
